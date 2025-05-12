@@ -32,8 +32,8 @@ class Generator(nn.Module):
             SelfAttention(ngf*4),
             nn.ConvTranspose2d(ngf*4, ngf*2, 4,2,1, bias=False), nn.BatchNorm2d(ngf*2), nn.ReLU(True),
             SelfAttention(ngf*2),
-            nn.ConvTranspose2d(ngf*2, ngf,   4,2,1, bias=False), nn.BatchNorm2d(ngf),   nn.ReLU(True),
-            nn.ConvTranspose2d(ngf,   nc,   4,2,1, bias=False), nn.Tanh()
+            nn.ConvTranspose2d(ngf*2, ngf, 4,2,1, bias=False), nn.BatchNorm2d(ngf), nn.ReLU(True),
+            nn.ConvTranspose2d(ngf, nc, 4,2,1, bias=False), nn.Tanh()
         )
     def forward(self, x):
         return self.main(x)
@@ -47,6 +47,7 @@ class Discriminator(nn.Module):
             utils_nn.spectral_norm(nn.Conv2d(ndf*2, ndf*4, 4,2,1, bias=False)), nn.LeakyReLU(0.2, True),
             SelfAttention(ndf*4),
             utils_nn.spectral_norm(nn.Conv2d(ndf*4, ndf*8, 4,2,1, bias=False)), nn.LeakyReLU(0.2, True),
+            SelfAttention(ndf*8),
             utils_nn.spectral_norm(nn.Conv2d(ndf*8, ndf*16,4,2,1, bias=False)), nn.LeakyReLU(0.2, True),
             utils_nn.spectral_norm(nn.Conv2d(ndf*16,1,4,1,0, bias=False))
         )
