@@ -26,8 +26,8 @@ def generate_samples(gen_path, output_dir, num_samples=100, nz=100):
     print(f"Saved {num_samples} samples to {output_dir}")
 
 generate_samples(
-  gen_path='gown_pths/netG_epoch_200.pth',
-  output_dir='gown_samples',
+  gen_path='person_pths/netG_epoch_200.pth',
+  output_dir='person_samples',
   num_samples=100,
   nz=100
 )
