@@ -1,6 +1,6 @@
 # DLG-final-project
 
-link to input dataset mask_crops: https://drive.google.com/file/d/129rzroyDJMvFSkbRF5R5vnGG13ulXTQw/view?usp=sharing
+link to input dataset mask_crops: [https://drive.google.com/file/d/129rzroyDJMvFSkbRF5R5vnGG13ulXTQw/view?usp=sharing](https://drive.google.com/file/d/1max9axogDugyu1BaBJJsjp0VR5UylWLJ/view?usp=sharing)
 
 To run, download and unzip mask_crops from the link above and place it in the same directory. Run the first two cells on first launch to sort crops into folders and create file metadata.
 
