@@ -11,3 +11,5 @@ The fourth cell augments the data for that object if necessary.
 The fifth cell does the initial 200 epochs of training and saves the pth files as well as samples from every tenth epoch.
 
 The sixth cell can be utilized if additional training after the intial 200 epochs is needed.
+
+Note: presentation slides are not representative of final project as our group changed
